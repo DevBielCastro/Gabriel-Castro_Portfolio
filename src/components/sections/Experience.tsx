@@ -85,15 +85,3 @@ export const experienceData = [
   },
 ] as const;
 
-// Dados de Formação Acadêmica
-export const educationData = [
-  {
-    degree: "Tecnólogo em Análise e Desenvolvimento de Sistemas",
-    institution: "UNIPÊ - Centro Universitário de João Pessoa",
-    location: "João Pessoa, PB",
-    description:
-      "Curso focado no desenvolvimento de software, abrangendo desde a lógica de programação e algoritmos até a construção de sistemas web e mobile, com ênfase em tecnologias de mercado.",
-    date: "2024 - 2026 (Em andamento)",
-  },
-] as const;
-
