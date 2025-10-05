@@ -2,7 +2,6 @@
 
 import React, { memo, useCallback } from "react";
 import Image from "next/image";
-// Link de Next.js não é mais necessário para a navegação principal, mas mantemos se for usado em outro lugar
 import Link from "next/link";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { ThemeSwitcher } from "./ThemeSwitcher";
@@ -10,7 +9,6 @@ import { skillsData } from "@/lib/data";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 
-// Dados centralizados para fácil manutenção
 const SIDEBAR_DATA = {
   name: "Gabriel Castro",
   title: "Desenvolvedor Fullstack",
@@ -19,12 +17,12 @@ const SIDEBAR_DATA = {
     alt: "Foto de perfil de Gabriel Castro",
     dimensions: 128,
   },
-  // A MUDANÇA ESTÁ AQUI: os links agora são âncoras (#)
   nav: [
     { name: "Sobre Mim", href: "#about" },
     { name: "Projetos", href: "#projects" },
     { name: "Experiência", href: "#experience" },
     { name: "Formação", href: "#education" },
+    { name: "Contato", href: "#contact" },
   ],
   social: [
     {
@@ -45,7 +43,6 @@ const SIDEBAR_DATA = {
   ],
 } as const;
 
-// Componente de Skill otimizado
 const SkillChip = memo(({ skill }: { skill: string }) => (
   <span
     className="rounded-full bg-slate-200 px-3 py-1 text-xs font-medium text-slate-700 transition-colors hover:bg-slate-300 dark:bg-slate-700 dark:text-slate-200 dark:hover:bg-slate-600"
@@ -60,7 +57,6 @@ const NavItem = memo(
   ({ item }: { item: (typeof SIDEBAR_DATA.nav)[number] }) => {
     return (
       <li>
-        {/* MUDANÇA: de Link para <a> para navegação por âncora */}
         <a
           href={item.href}
           className="block rounded-md px-4 py-2 text-slate-700 transition-all hover:bg-slate-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:text-slate-300 dark:hover:bg-slate-800"
@@ -74,7 +70,6 @@ const NavItem = memo(
 );
 NavItem.displayName = "NavItem";
 
-// Componente Social Link com segurança
 const SocialLink = memo(
   ({ item }: { item: (typeof SIDEBAR_DATA.social)[number] }) => {
     const Icon = item.icon;
@@ -97,7 +92,6 @@ const SocialLink = memo(
 );
 SocialLink.displayName = "SocialLink";
 
-// Componente Principal
 const Sidebar = memo(() => {
   const renderSkills = useCallback(
     () =>
@@ -109,9 +103,7 @@ const Sidebar = memo(() => {
 
   return (
     <aside className="fixed top-0 left-0 z-50 flex h-screen w-80 flex-col justify-between border-r border-black/5 bg-slate-100 p-8 dark:border-white/10 dark:bg-[#161b22] overflow-y-auto">
-      {/* Seção Superior */}
       <div className="flex flex-col space-y-8">
-        {/* Perfil */}
         <section aria-labelledby="profile-heading">
           <div className="flex flex-col items-center text-center">
             <div className="relative mb-4">
@@ -137,7 +129,6 @@ const Sidebar = memo(() => {
             </p>
           </div>
 
-          {/* Habilidades */}
           <div
             className="flex flex-wrap justify-center gap-2"
             aria-label="Habilidades técnicas"
@@ -146,7 +137,6 @@ const Sidebar = memo(() => {
           </div>
         </section>
 
-        {/* Navegação */}
         <nav aria-label="Navegação principal">
           <ul className="space-y-2">
             {SIDEBAR_DATA.nav.map((item) => (
@@ -156,9 +146,7 @@ const Sidebar = memo(() => {
         </nav>
       </div>
 
-      {/* Seção Inferior */}
       <div className="flex flex-col items-center space-y-4">
-        {/* Links Sociais */}
         <div
           className="flex space-x-2"
           aria-label="Links para redes sociais"
@@ -168,7 +156,6 @@ const Sidebar = memo(() => {
           ))}
         </div>
 
-        {/* Alternador de Tema */}
         <ThemeSwitcher />
       </div>
     </aside>

@@ -1,62 +1,94 @@
+import { Project } from "@/types";
+
 // Dados das Habilidades (Skills)
 export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
   "TypeScript",
-  "React",
-  "Next.js",
+  "JavaScript",
   "Node.js",
+  "Express",
+  "Python",
+  "Django",
+  "PostgreSQL",
+  "MongoDB",
+  "Docker",
   "Git",
   "Tailwind CSS",
+  "React",
+  "Next.js",
   "Prisma",
-  "MongoDB",
-  "Redux",
-  "Express",
-  "PostgreSQL",
-  "Python",
-  "Framer Motion",
 ] as const;
 
-// Dados dos Projetos
-export const projectsData = [
+// Dados dos Projetos com Mini-Cases
+export const projectsData: Project[] = [
   {
+    id: "garcom-digital",
     title: "Garçom Digital",
+    role: "Fullstack Developer",
     description:
-      "Aplicação web que moderniza o atendimento em restaurantes. Clientes podem ver o cardápio, fazer pedidos e pagar a conta diretamente pelo celular.",
-    tags: ["React", "TypeScript", "Node.js", "MongoDB", "Tailwind CSS"],
+      "Aplicação que moderniza o atendimento em restaurantes, permitindo que os clientes façam pedidos e pagamentos diretamente pelo telemóvel.",
+    stack: ["React", "TypeScript", "Node.js", "MongoDB", "Tailwind CSS"],
     imageUrl: "/garcom-digital.png",
     liveUrl: "#",
     repoUrl: "https://github.com/DevBielCastro/Sistema_Restaurante",
+    challenge:
+      "Digitalizar o fluxo de um restaurante, desde o pedido à cozinha até ao pagamento, de forma a reduzir erros e otimizar o tempo dos funcionários.",
+    solution:
+      "Construí uma API REST com Node.js para gerir os pedidos e um front-end reativo com React e TypeScript para a interação do cliente.",
+    impact:
+      "O sistema oferece uma base para a redução do tempo de espera, diminuição de erros nos pedidos e uma melhor experiência geral para o cliente.",
   },
   {
-    title: "NeuroStack",
+    id: "neurostack",
+    title: "NeuroStack - Gestor de Projetos",
+    role: "Fullstack Developer",
     description:
       "Plataforma de gerenciamento de projetos e tarefas para equipes de desenvolvimento, com quadros Kanban, timelines e relatórios.",
-    tags: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Auth.js"],
+    stack: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Auth.js"],
     imageUrl: "/neurostack.png",
     liveUrl: "https://www.neurostack.com.br/",
     repoUrl: "https://github.com/DevBielCastro/neurostack-site-pessoal",
+    challenge:
+      "Criar um sistema de gestão de projetos que fosse ao mesmo tempo completo em funcionalidades e intuitivo para o utilizador final.",
+    solution:
+      "Desenvolvi uma arquitetura fullstack com Next.js para o front-end e back-end, Prisma para o ORM e PostgreSQL para a base de dados, focando numa UI reativa.",
+    impact:
+      "O resultado é uma ferramenta robusta que centraliza a gestão de tarefas, melhora a colaboração e fornece uma base escalável para futuras funcionalidades.",
   },
   {
+    id: "gabriel-mario-adv",
     title: "Gabriel Mario Advocacia",
+    role: "Frontend Developer",
     description:
       "Website institucional para um escritório de advocacia, com design moderno, responsivo e focado em apresentar os serviços e a equipe.",
-    tags: ["HTML", "CSS", "JavaScript", "Responsivo"],
+    stack: ["HTML", "CSS", "JavaScript", "Responsivo"],
     imageUrl: "/gabriel-mario-adv.png",
     liveUrl: "https://www.gabrielmarioadv.com.br/",
-    repoUrl: "#",
+    repoUrl: "https://github.com/DevBielCastro/projetositegabrielmarioadv",
+    challenge:
+      "Desenvolver uma presença online profissional para um escritório de advocacia, que transmitisse confiança e fosse acessível em todos os dispositivos.",
+    solution:
+      "Criei um site institucional totalmente responsivo com foco num design limpo, tipografia clara e carregamento rápido para garantir a melhor experiência ao utilizador.",
+    impact:
+      "O site fortaleceu a imagem digital do escritório, melhorou a captação de novos clientes e apresentou os serviços de forma clara e profissional.",
   },
   {
+    id: "supletivo-jp",
     title: "Supletivo JP",
+    role: "Web Developer",
     description:
       "Plataforma educacional para um curso supletivo, permitindo matrículas online, acesso a materiais e comunicação com a instituição.",
-    tags: ["WordPress", "PHP", "MySQL", "Elementor"],
+    stack: ["WordPress", "PHP", "MySQL", "Elementor"],
     imageUrl: "/supletivo-jp.png",
     liveUrl: "https://www.supletivojp.com.br/",
-    repoUrl: "#",
+    repoUrl: "https://github.com/DevBielCastro/supletivojp",
+    challenge:
+      "Disponibilizar uma plataforma online para um curso, permitindo que os alunos se matriculem e acedam a materiais de forma fácil e centralizada.",
+    solution:
+      "Implementei e personalizei uma solução em WordPress, configurando formulários de matrícula, uma área de membros para o conteúdo e otimizando a navegação.",
+    impact:
+      "A plataforma automatizou o processo de matrícula, ampliou o alcance do curso e tornou o acesso aos materiais mais conveniente para os alunos.",
   },
-] as const;
+];
 
 // Dados de Experiência Profissional
 export const experienceData = [
