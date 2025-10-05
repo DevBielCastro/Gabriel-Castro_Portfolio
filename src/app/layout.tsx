@@ -1,14 +1,15 @@
+import React from 'react'; // <-- ADICIONE ESTA LINHA
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import Sidebar from "@/components/layout/Sidebar";
 
-
-const inter = Inter({
+const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-inter",
+  weight: ['400', '500', '700']
 });
 
 export const metadata: Metadata = {
@@ -19,21 +20,22 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}): JSX.Element {
   return (
     <html lang="pt-BR" suppressHydrationWarning className="scroll-smooth">
-      {}
       <body
-        className={`${inter.variable} font-sans 
+        className={`${poppins.variable} font-sans 
           bg-app-light text-slate-800
-          dark:bg-app-dark dark:text-slate-200 
+          dark:bg-app-dark dark:text-text-light 
           transition-colors duration-300`}
       >
         <ThemeProvider>
           <div className="flex">
-            <Sidebar />
+            <div className="dark:bg-surface-dark">
+              <Sidebar />
+            </div>
             <main className="ml-80 w-full p-8">{children}</main>
           </div>
         </ThemeProvider>
@@ -41,4 +43,3 @@ export default function RootLayout({
     </html>
   );
 }
-

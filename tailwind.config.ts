@@ -1,44 +1,61 @@
 import type { Config } from "tailwindcss";
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 const config: Config = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
   darkMode: "class",
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
+  prefix: "",
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
     extend: {
-
-      colors: {
-        brand: {
-          50: "#F5F3FF",
-          100: "#EDE9FE",
-          500: "#7C3AED",
-          600: "#6D28D9",
-          700: "#5B21B6",
-        },
-        app: {
-          dark: "#0F1724",
-          light: "#F8FAFC",
-        },
-       
-        surface: {
-          dark: "#1E293B",
-          light: "#FFFFFF",
-        },
-      },
-
       fontFamily: {
-        sans: ["var(--font-inter)", "ui-sans-serif", "system-ui"],
+        sans: ["var(--font-inter)", ...defaultTheme.fontFamily.sans],
       },
-
-      boxShadow: {
-        "soft-lg": "0 10px 30px -15px rgba(2, 6, 23, 0.2)",
+      colors: {
+        "app-light": "#F7F7F7",
+        "app-dark": "#0a192f",
+        "surface-dark": "#112240",
+        "text-light": "#ccd6f6",
+        "text-muted": "#8892b0",
+        "brand": "#64ffda",
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      backgroundImage: {
+        "hero-light": "url('/backgrounds/hero-light.svg')",
+        "hero-dark": "url('/backgrounds/hero-dark.svg')",
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 };
-export default config;
 
+export default config;
