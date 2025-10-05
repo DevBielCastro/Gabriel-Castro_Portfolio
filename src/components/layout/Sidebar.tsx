@@ -2,12 +2,9 @@
 
 import React, { memo, useCallback } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 import { skillsData } from "@/lib/data";
-import { usePathname } from "next/navigation";
-import clsx from "clsx";
 
 const SIDEBAR_DATA = {
   name: "Gabriel Castro",
@@ -25,11 +22,7 @@ const SIDEBAR_DATA = {
     { name: "Contato", href: "#contact" },
   ],
   social: [
-    {
-      icon: Github,
-      href: "https://github.com/DevBielCastro",
-      label: "GitHub",
-    },
+    { icon: Github, href: "https://github.com/DevBielCastro", label: "GitHub" },
     {
       icon: Linkedin,
       href: "https://www.linkedin.com/in/devbielcastro/",
@@ -44,29 +37,24 @@ const SIDEBAR_DATA = {
 } as const;
 
 const SkillChip = memo(({ skill }: { skill: string }) => (
-  <span
-    className="rounded-full bg-slate-200 px-3 py-1 text-xs font-medium text-slate-700 transition-colors hover:bg-slate-300 dark:bg-slate-700 dark:text-slate-200 dark:hover:bg-slate-600"
-    title={`Habilidade: ${skill}`}
-  >
+  <span className="rounded-full bg-slate-200 px-3 py-1 text-xs font-medium text-slate-700 transition-colors dark:bg-slate-800 dark:text-slate-200">
     {skill}
   </span>
 ));
 SkillChip.displayName = "SkillChip";
 
 const NavItem = memo(
-  ({ item }: { item: (typeof SIDEBAR_DATA.nav)[number] }) => {
-    return (
-      <li>
-        <a
-          href={item.href}
-          className="block rounded-md px-4 py-2 text-slate-700 transition-all hover:bg-slate-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:text-slate-300 dark:hover:bg-slate-800"
-          aria-label={`Navegar para ${item.name}`}
-        >
-          {item.name}
-        </a>
-      </li>
-    );
-  }
+  ({ item }: { item: (typeof SIDEBAR_DATA.nav)[number] }) => (
+    <li>
+      <a
+        href={item.href}
+        className="block rounded-md px-4 py-2 text-slate-600 transition-colors hover:bg-brand-50 hover:text-brand-600 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-50"
+        aria-label={`Navegar para ${item.name}`}
+      >
+        {item.name}
+      </a>
+    </li>
+  )
 );
 NavItem.displayName = "NavItem";
 
@@ -74,16 +62,12 @@ const SocialLink = memo(
   ({ item }: { item: (typeof SIDEBAR_DATA.social)[number] }) => {
     const Icon = item.icon;
     const isExternal = item.href.startsWith("http");
-
     return (
       <a
         href={item.href}
         aria-label={`Visitar ${item.label}`}
-        {...(isExternal && {
-          target: "_blank",
-          rel: "noopener noreferrer",
-        })}
-        className="p-2 text-slate-600 transition-all hover:text-slate-900 hover:scale-110 dark:text-slate-400 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-full"
+        {...(isExternal && { target: "_blank", rel: "noopener noreferrer" })}
+        className="rounded-full p-2 text-slate-500 transition-colors hover:bg-slate-100 hover:text-brand-500 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-brand-500"
       >
         <Icon size={20} aria-hidden="true" />
       </a>
@@ -102,7 +86,7 @@ const Sidebar = memo(() => {
   );
 
   return (
-    <aside className="fixed top-0 left-0 z-50 flex h-screen w-80 flex-col justify-between border-r border-black/5 bg-slate-100 p-8 dark:border-white/10 dark:bg-[#161b22] overflow-y-auto">
+    <aside className="fixed top-0 left-0 z-50 flex h-screen w-80 flex-col justify-between border-r border-slate-200 bg-surface-light p-8 dark:border-slate-800 dark:bg-surface-dark overflow-y-auto">
       <div className="flex flex-col space-y-8">
         <section aria-labelledby="profile-heading">
           <div className="flex flex-col items-center text-center">
@@ -114,7 +98,7 @@ const Sidebar = memo(() => {
                 height={SIDEBAR_DATA.image.dimensions}
                 quality={90}
                 priority
-                className="h-32 w-32 rounded-full border-4 border-white object-cover shadow-lg transition-transform hover:scale-105 dark:border-slate-700"
+                className="h-32 w-32 rounded-full border-4 border-white object-cover shadow-lg transition-transform hover:scale-105 dark:border-surface-dark"
               />
             </div>
 

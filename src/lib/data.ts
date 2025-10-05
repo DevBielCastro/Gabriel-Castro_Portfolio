@@ -1,5 +1,37 @@
 import { Project } from "@/types";
 
+// DADOS DA BARRA LATERAL - Agora exportados para uso global
+export const SIDEBAR_DATA = {
+  name: "Gabriel Castro",
+  title: "Desenvolvedor Fullstack",
+  image: {
+    url: "/profile-photo.jpg",
+    alt: "Foto de perfil de Gabriel Castro",
+    dimensions: 128,
+  },
+  nav: [
+    { name: "Sobre Mim", href: "#about" },
+    { name: "Projetos", href: "#projects" },
+    { name: "Experiência", href: "#experience" },
+    { name: "Formação", href: "#education" },
+    { name: "Contato", href: "#contact" },
+  ],
+  social: [
+    {
+      href: "https://github.com/DevBielCastro",
+      label: "GitHub",
+    },
+    {
+      href: "https://www.linkedin.com/in/devbielcastro/",
+      label: "LinkedIn",
+    },
+    {
+      href: "mailto:gabriel.castrogt10@gmail.com",
+      label: "E-mail",
+    },
+  ],
+} as const;
+
 // Dados das Habilidades (Skills)
 export const skillsData = [
   "TypeScript",
@@ -21,23 +53,6 @@ export const skillsData = [
 // Dados dos Projetos com Mini-Cases
 export const projectsData: Project[] = [
   {
-    id: "garcom-digital",
-    title: "Garçom Digital",
-    role: "Fullstack Developer",
-    description:
-      "Aplicação que moderniza o atendimento em restaurantes, permitindo que os clientes façam pedidos e pagamentos diretamente pelo telemóvel.",
-    stack: ["React", "TypeScript", "Node.js", "MongoDB", "Tailwind CSS"],
-    imageUrl: "/garcom-digital.png",
-    liveUrl: "#",
-    repoUrl: "https://github.com/DevBielCastro/Sistema_Restaurante",
-    challenge:
-      "Digitalizar o fluxo de um restaurante, desde o pedido à cozinha até ao pagamento, de forma a reduzir erros e otimizar o tempo dos funcionários.",
-    solution:
-      "Construí uma API REST com Node.js para gerir os pedidos e um front-end reativo com React e TypeScript para a interação do cliente.",
-    impact:
-      "O sistema oferece uma base para a redução do tempo de espera, diminuição de erros nos pedidos e uma melhor experiência geral para o cliente.",
-  },
-  {
     id: "neurostack",
     title: "NeuroStack - Gestor de Projetos",
     role: "Fullstack Developer",
@@ -55,6 +70,23 @@ export const projectsData: Project[] = [
       "O resultado é uma ferramenta robusta que centraliza a gestão de tarefas, melhora a colaboração e fornece uma base escalável para futuras funcionalidades.",
   },
   {
+    id: "garcom-digital",
+    title: "Garçom Digital",
+    role: "Fullstack Developer",
+    description:
+      "Aplicação que moderniza o atendimento em restaurantes, permitindo que os clientes façam pedidos e pagamentos diretamente pelo telemóvel.",
+    stack: ["React", "TypeScript", "Node.js", "MongoDB", "Tailwind CSS"],
+    imageUrl: "/garcom-digital.png",
+    liveUrl: "#",
+    repoUrl: "https://github.com/DevBielCastro/Sistema_Restaurante",
+    challenge:
+      "Digitalizar o fluxo de um restaurante, desde o pedido à cozinha até ao pagamento, de forma a reduzir erros e otimizar o tempo dos funcionários.",
+    solution:
+      "Construí uma API REST com Node.js para gerir os pedidos e um front-end reativo com React e TypeScript para a interação do cliente.",
+    impact:
+      "O sistema oferece uma base para a redução do tempo de espera, diminuição de erros nos pedidos e uma melhor experiência geral para o cliente.",
+  },
+  {
     id: "gabriel-mario-adv",
     title: "Gabriel Mario Advocacia",
     role: "Frontend Developer",
@@ -63,7 +95,7 @@ export const projectsData: Project[] = [
     stack: ["HTML", "CSS", "JavaScript", "Responsivo"],
     imageUrl: "/gabriel-mario-adv.png",
     liveUrl: "https://www.gabrielmarioadv.com.br/",
-    repoUrl: "https://github.com/DevBielCastro/projetositegabrielmarioadv",
+    repoUrl: "#",
     challenge:
       "Desenvolver uma presença online profissional para um escritório de advocacia, que transmitisse confiança e fosse acessível em todos os dispositivos.",
     solution:
@@ -80,7 +112,7 @@ export const projectsData: Project[] = [
     stack: ["WordPress", "PHP", "MySQL", "Elementor"],
     imageUrl: "/supletivo-jp.png",
     liveUrl: "https://www.supletivojp.com.br/",
-    repoUrl: "https://github.com/DevBielCastro/supletivojp",
+    repoUrl: "#",
     challenge:
       "Disponibilizar uma plataforma online para um curso, permitindo que os alunos se matriculem e acedam a materiais de forma fácil e centralizada.",
     solution:

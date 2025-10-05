@@ -13,7 +13,7 @@ const Contact = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
-      className="text-center"
+      className="py-16 text-center"
     >
       <PageTitle>Vamos Conversar</PageTitle>
       <p className="mx-auto mb-8 max-w-xl text-slate-600 dark:text-slate-300">
@@ -24,7 +24,7 @@ const Contact = () => {
       <div className="flex flex-wrap justify-center gap-4">
         <a
           href="mailto:gabriel.castrogt10@gmail.com"
-          className="inline-flex items-center gap-2 rounded-md bg-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-indigo-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
+          className="inline-flex items-center gap-2 rounded-md bg-brand-500 px-5 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
         >
           <Mail size={18} />
           Enviar um E-mail

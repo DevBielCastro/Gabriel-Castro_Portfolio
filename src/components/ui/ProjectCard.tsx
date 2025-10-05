@@ -9,7 +9,7 @@ type ProjectCardProps = {
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition-shadow hover:shadow-lg dark:border-slate-800 dark:bg-slate-900/50">
+    <article className="group flex h-full flex-col overflow-hidden rounded-lg border border-slate-200 bg-surface-light shadow-soft-lg transition-shadow hover:shadow-xl dark:border-slate-800 dark:bg-surface-dark">
       {/* Imagem do Projeto */}
       <div className="relative h-48 w-full">
         <Image
@@ -27,7 +27,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             {project.title}
           </h3>
           {project.role && (
-            <p className="mt-1 text-sm font-semibold text-indigo-600 dark:text-indigo-400">
+            <p className="mt-1 text-sm font-semibold text-brand-600 dark:text-brand-500">
               {project.role}
             </p>
           )}
@@ -63,14 +63,14 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       </div>
 
       {/* Links no Rodapé */}
-      <footer className="border-t border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-900">
+      <footer className="border-t border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-900/80">
         <div className="flex items-center justify-end gap-4">
           {project.liveUrl && project.liveUrl !== "#" && (
             <a
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center text-sm font-medium text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-300 dark:hover:text-indigo-400"
+              className="inline-flex items-center text-sm font-medium text-slate-600 transition-colors hover:text-brand-600 dark:text-slate-300 dark:hover:text-brand-500"
             >
               <ExternalLink size={16} className="mr-1.5" />
               Ver online
@@ -81,7 +81,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               href={project.repoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center text-sm font-medium text-slate-600 transition-colors hover:text-indigo-600 dark:text-slate-300 dark:hover:text-indigo-400"
+              className="inline-flex items-center text-sm font-medium text-slate-600 transition-colors hover:text-brand-600 dark:text-slate-300 dark:hover:text-brand-500"
             >
               <Github size={16} className="mr-1.5" />
               Código
@@ -94,3 +94,4 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
 };
 
 export default ProjectCard;
+

@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
-import { Sora } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import Sidebar from "@/components/layout/Sidebar";
 
-const sora = Sora({ subsets: ["latin"] });
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
   title: "Gabriel Castro | Desenvolvedor Fullstack",
@@ -20,10 +24,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" suppressHydrationWarning className="scroll-smooth">
+      {}
       <body
-        className={`${sora.className} 
-          bg-white text-slate-800
-          dark:bg-[#0d1117] dark:text-slate-200 
+        className={`${inter.variable} font-sans 
+          bg-app-light text-slate-800
+          dark:bg-app-dark dark:text-slate-200 
           transition-colors duration-300`}
       >
         <ThemeProvider>

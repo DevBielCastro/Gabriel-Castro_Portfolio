@@ -4,9 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { educationData } from "@/lib/data";
 import PageTitle from "../ui/PageTitle";
-import { GraduationCap } from "lucide-react";
 
-// Componente para o Card de Formação
 const EducationCard = ({
   item,
   index,
@@ -19,14 +17,14 @@ const EducationCard = ({
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.1 }}
-      className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900/50"
+      className="rounded-lg border border-slate-200 bg-surface-light p-6 shadow-soft-lg transition-shadow hover:shadow-xl dark:border-slate-800 dark:bg-surface-dark"
     >
       <div className="flex flex-col items-start gap-2 sm:flex-row sm:justify-between">
         <div>
           <h3 className="text-xl font-bold text-slate-900 dark:text-white">
             {item.degree}
           </h3>
-          <p className="mb-2 text-md font-semibold text-indigo-600 dark:text-indigo-400">
+          <p className="mb-2 text-md font-semibold text-brand-600 dark:text-brand-500">
             {item.institution} &middot; {item.location}
           </p>
         </div>
