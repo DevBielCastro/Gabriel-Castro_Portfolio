@@ -2,6 +2,7 @@
 
 import React, { memo, useCallback } from "react";
 import Image from "next/image";
+// Link de Next.js não é mais necessário para a navegação principal, mas mantemos se for usado em outro lugar
 import Link from "next/link";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { ThemeSwitcher } from "./ThemeSwitcher";
@@ -18,11 +19,12 @@ const SIDEBAR_DATA = {
     alt: "Foto de perfil de Gabriel Castro",
     dimensions: 128,
   },
+  // A MUDANÇA ESTÁ AQUI: os links agora são âncoras (#)
   nav: [
-    { name: "Sobre Mim", href: "/" },
-    { name: "Projetos", href: "/projects" },
-    { name: "Experiência", href: "/experience" },
-    { name: "Formação", href: "/education" },
+    { name: "Sobre Mim", href: "#about" },
+    { name: "Projetos", href: "#projects" },
+    { name: "Experiência", href: "#experience" },
+    { name: "Formação", href: "#education" },
   ],
   social: [
     {
@@ -54,29 +56,18 @@ const SkillChip = memo(({ skill }: { skill: string }) => (
 ));
 SkillChip.displayName = "SkillChip";
 
-// Componente de Link de Navegação com tratamento de acessibilidade
 const NavItem = memo(
   ({ item }: { item: (typeof SIDEBAR_DATA.nav)[number] }) => {
-    const pathname = usePathname();
-    const isActive = pathname === item.href;
-
     return (
       <li>
-        <Link
+        {/* MUDANÇA: de Link para <a> para navegação por âncora */}
+        <a
           href={item.href}
-          className={clsx(
-            "block rounded-md px-4 py-2 transition-all hover:bg-slate-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:hover:bg-slate-800",
-            {
-              "bg-slate-200 dark:bg-slate-800 font-semibold text-slate-900 dark:text-white":
-                isActive,
-              "text-slate-700 dark:text-slate-300": !isActive,
-            }
-          )}
+          className="block rounded-md px-4 py-2 text-slate-700 transition-all hover:bg-slate-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:text-slate-300 dark:hover:bg-slate-800"
           aria-label={`Navegar para ${item.name}`}
-          aria-current={isActive ? "page" : undefined}
         >
           {item.name}
-        </Link>
+        </a>
       </li>
     );
   }
@@ -122,7 +113,6 @@ const Sidebar = memo(() => {
       <div className="flex flex-col space-y-8">
         {/* Perfil */}
         <section aria-labelledby="profile-heading">
-          {/* A CORREÇÃO ESTÁ AQUI: Trocamos 'text-center' por flexbox para um alinhamento perfeito */}
           <div className="flex flex-col items-center text-center">
             <div className="relative mb-4">
               <Image

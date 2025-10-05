@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" suppressHydrationWarning>
+    <html lang="pt-BR" suppressHydrationWarning className="scroll-smooth">
       <body
         className={`${sora.className} 
           bg-white text-slate-800
@@ -29,7 +29,6 @@ export default function RootLayout({
         <ThemeProvider>
           <div className="flex">
             <Sidebar />
-            {/* A margem à esquerda (ml-80) cria o espaço para a Sidebar */}
             <main className="ml-80 w-full p-8">{children}</main>
           </div>
         </ThemeProvider>

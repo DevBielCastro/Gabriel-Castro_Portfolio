@@ -87,7 +87,8 @@ const ProjectCard = ({
 // Componente Principal da Secção
 const Projects = () => {
   return (
-    <section>
+    // A MUDANÇA ESTÁ AQUI
+    <section id="projects">
       <PageTitle>Projetos</PageTitle>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         {projectsData.map((project, index) => (

@@ -54,7 +54,8 @@ const EducationItem = ({
 // Componente Principal da Secção
 const Education = () => {
   return (
-    <section>
+    // A MUDANÇA ESTÁ AQUI
+    <section id="education">
       <PageTitle>Formação Académica</PageTitle>
       <div className="flex flex-col gap-8">
         {educationData.map((item, index) => (

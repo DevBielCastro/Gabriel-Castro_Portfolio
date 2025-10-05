@@ -60,7 +60,7 @@ const ExperienceItem = ({
 // Componente Principal da Secção
 const Experience = () => {
   return (
-    <section>
+    <section id="experience">
       <PageTitle>Experiência Profissional</PageTitle>
       <div className="flex flex-col">
         {experienceData.map((item, index) => (

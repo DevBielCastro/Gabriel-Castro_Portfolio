@@ -27,7 +27,7 @@ export const projectsData = [
     tags: ["React", "TypeScript", "Node.js", "MongoDB", "Tailwind CSS"],
     imageUrl: "/garcom-digital.png",
     liveUrl: "#",
-    repoUrl: "https://github.com/DevBielCastro/GarcomDigital_FrontEnd",
+    repoUrl: "https://github.com/DevBielCastro/Sistema_Restaurante",
   },
   {
     title: "NeuroStack",
@@ -35,8 +35,8 @@ export const projectsData = [
       "Plataforma de gerenciamento de projetos e tarefas para equipes de desenvolvimento, com quadros Kanban, timelines e relatórios.",
     tags: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Auth.js"],
     imageUrl: "/neurostack.png",
-    liveUrl: "#",
-    repoUrl: "https://github.com/DevBielCastro/NeuroStack",
+    liveUrl: "https://www.neurostack.com.br/",
+    repoUrl: "https://github.com/DevBielCastro/neurostack-site-pessoal",
   },
   {
     title: "Gabriel Mario Advocacia",
