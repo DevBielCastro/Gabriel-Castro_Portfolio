@@ -1,24 +1,33 @@
-# Logs
+# Arquivos de log
 logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
 
+# Dependências (a pasta mais importante a ser ignorada)
 node_modules
+
+# Arquivos de build de produção
 dist
 dist-ssr
-*.local
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# Arquivos de ambiente
+# ESSENCIAL para não expor suas chaves de API!
+.env
+.env.local
+.env.*.local
+
+# Cache do Vite
+.vite
+
+# Arquivos de sistema operacional
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+Thumbs.db
+
+# Diretórios de IDEs
+.vscode/
+.idea/
+
+# Relatórios de teste
+coverage
