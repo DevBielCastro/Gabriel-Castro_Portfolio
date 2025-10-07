@@ -12,20 +12,21 @@ export function About() {
           {/* Coluna de Texto */}
           <div className="md:w-2/3 text-lg text-secondary/80 space-y-6">
             <p>
-              Olá! Sou Gabriel Castro, um desenvolvedor Fullstack e estudante de Análise e Desenvolvimento de Sistemas (ADS) apaixonado por transformar ideias em soluções tecnológicas robustas e eficientes.
+              Olá! Sou <span className="font-semibold text-accent/90">Gabriel Castro</span>, desenvolvedor <span className="font-semibold">Fullstack</span> e estudante de <span className="font-semibold">Análise e Desenvolvimento de Sistemas (ADS)</span>, apaixonado por tecnologia e por transformar ideias em soluções digitais escaláveis e de alto desempenho.
             </p>
             <p>
-              Com uma base sólida no ecossistema JavaScript/TypeScript, meu foco está na construção de aplicações modernas utilizando React, Next.js e Node.js. Tenho experiência prática desenvolvendo projetos complexos, desde sistemas de gestão como o <span className="text-accent/90 font-semibold">"Garçom Digital"</span> até a concepção da identidade e plataforma da <span className="text-accent/90 font-semibold">"Neurostack"</span>.
+              Com uma base sólida no ecossistema <span className="font-semibold">JavaScript/TypeScript</span>, foco na construção de aplicações modernas com <span className="font-semibold">React, Next.js e Node.js</span>, venho desenvolvendo projetos completos que unem performance, design e boas práticas de código. Entre eles, destaco sistemas de gestão como o <span className="text-accent/90 font-semibold">"Garçom Digital"</span> e a criação da identidade e plataforma da <span className="text-accent/90 font-semibold">"Neurostack"</span>.
             </p>
             <p>
-              Estou sempre explorando novas tecnologias, incluindo DevOps com Docker e desenvolvimento backend com Python. Atualmente, busco minha primeira oportunidade de estágio para aplicar meu conhecimento, colaborar com equipes experientes e contribuir para projetos desafiadores.
+              Atualmente, estou me aprimorando em arquitetura backend com <span className="font-semibold">Node.js</span>, integração de serviços e práticas de <span className="font-semibold">DevOps</span>, utilizando ferramentas como <span className="font-semibold">Docker, AWS, Google Cloud</span> e <span className="font-semibold">Vercel</span> para deploy e automação de ambientes. Busco minha <span className="font-semibold">primeira grande oportunidade profissional</span> para colaborar em projetos desafiadores, contribuir com equipes experientes e continuar evoluindo como desenvolvedor.
             </p>
+
           </div>
 
           {/* Coluna da Imagem */}
           <div className="md:w-1/3 flex justify-center">
-            <img 
-              src={aboutPhoto} 
+            <img
+              src={aboutPhoto}
               alt="Gabriel Castro em um ambiente profissional"
               className="rounded-lg w-80 h-96 object-cover shadow-2xl shadow-primary/30 transform hover:scale-105 transition-transform duration-300"
             />

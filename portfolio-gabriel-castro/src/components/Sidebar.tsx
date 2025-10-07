@@ -29,7 +29,7 @@ export function Sidebar() {
         <a href="https://github.com/DevBielCastro" target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-accent transition-colors">
           <FaGithub size={28} />
         </a>
-        <a href="https://www.linkedin.com/in/devbielcastro/" target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-accent transition-colors">
+        <a href="https://www.linkedin.com/in/gabriel-castro-9a9745209/" target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-accent transition-colors">
           <FaLinkedin size={28} />
         </a>
       </div>
