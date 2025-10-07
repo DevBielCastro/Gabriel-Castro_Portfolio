@@ -8,17 +8,16 @@ import { Skills } from "./components/Skills";
 
 function App() {
   return (
-    <main className="min-h-screen bg-gray-900 text-gray-300">
+    <main className="min-h-screen bg-background text-gray-300">
       <Header />
-      <div className="flex">
-        <Sidebar />
-        <div className="flex-1">
-          <About />
-          <Experience />
-          <Projects />
-          <Skills />
-          <Contact />
-        </div>
+      <Sidebar />
+      {/* A mudança principal está aqui: pl-64 (padding-left) */}
+      <div className="pl-64"> 
+        <About />
+        <Experience />
+        <Projects />
+        <Skills />
+        <Contact />
       </div>
     </main>
   );
