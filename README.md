@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Portfólio Pessoal de Gabriel Castro
 
-## Getting Started
+Bem-vindo ao repositório do meu portfólio pessoal! Este é um projeto one-page construído com as tecnologias mais modernas do ecossistema React, com o objetivo de apresentar minhas habilidades, experiências e projetos de forma clara, profissional e visualmente agradável.
 
-First, run the development server:
+### ✨ Visão Geral
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+![Screenshot do Portfólio](./.github/assets/screenshot.png)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 📋 Funcionalidades Principais
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* **🎨 Design Moderno e Responsivo:** Totalmente adaptado para desktops, tablets e celulares (Mobile First).
+* **📄 Arquitetura One-Page:** Todas as informações em uma única página com navegação suave entre as seções.
+* **🎬 Animações Sutis:** Efeitos de hover e animações de entrada com Framer Motion para uma experiência de usuário mais fluida e dinâmica.
+* **📂 Seções Completas:**
+    * **Sobre Mim:** Uma breve introdução profissional.
+    * **Experiência:** Uma linha do tempo interativa com meu histórico profissional.
+    * **Projetos:** Um grid de cards com meus principais projetos, incluindo links para o código no GitHub e para a versão ao vivo.
+    * **Habilidades:** Lista de competências técnicas agrupadas por categoria.
+* **📬 Formulário de Contato Funcional:** Integrado com o **EmailJS** para permitir o envio de e-mails diretamente pelo site, sem a necessidade de um back-end.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+### 🛠️ Tecnologias Utilizadas
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Este projeto foi construído utilizando as seguintes tecnologias e ferramentas:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* **Front-end:**
+    * [React](https://reactjs.org/)
+    * [Vite](https://vitejs.dev/)
+    * [TypeScript](https://www.typescriptlang.org/)
+    * [Tailwind CSS](https://tailwindcss.com/)
+    * [Framer Motion](https://www.framer.com/motion/)
+* **Utilitários:**
+    * [EmailJS](https://www.emailjs.com/)
+    * [React Icons](https://react-icons.github.io/react-icons/)
+* **Gerenciador de Pacotes:**
+    * [Yarn](https://yarnpkg.com/)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### ⚙️ Como Executar o Projeto Localmente
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Para rodar este projeto na sua máquina, siga os passos abaixo:
+
+1.  **Clone o repositório:**
+    ```bash
+    git clone [https://github.com/DevBielCastro/Gabriel-Castro_Portfolio.git](https://github.com/DevBielCastro/Gabriel-Castro_Portfolio.git)
+    ```
+
+2.  **Navegue até a pasta do projeto:**
+    ```bash
+    cd Gabriel-Castro_Portfolio
+    ```
+
+3.  **Instale as dependências:**
+    (Este projeto utiliza o Yarn. Certifique-se de que o tenha instalado com `npm install -g yarn`)
+    ```bash
+    yarn
+    ```
+
+4.  **Configure as variáveis de ambiente:**
+    * Crie um arquivo `.env.local` na raiz do projeto.
+    * Adicione suas chaves do EmailJS, como no exemplo abaixo:
+        ```env
+        VITE_EMAILJS_SERVICE_ID=seu_service_id
+        VITE_EMAILJS_TEMPLATE_ID=seu_template_id
+        VITE_EMAILJS_PUBLIC_KEY=sua_public_key
+        ```
+
+5.  **Inicie o servidor de desenvolvimento:**
+    ```bash
+    yarn dev
+    ```
+
+O site estará disponível em `http://localhost:5173`.
+
+---
+
+### 📞 Contato
+
+* **LinkedIn:** [linkedin.com/in/devbielcastro](https://www.linkedin.com/in/devbielcastro/)
+* **E-mail:** `gabriel.castrogt10@gmail.com`
