@@ -2,7 +2,11 @@ import { FaReact, FaNodeJs, FaDocker, FaGithub, FaLinkedin } from "react-icons/f
 import { SiPostgresql, SiTypescript } from "react-icons/si";
 import profilePic from '../assets/profile.jpg';
 
-export function Sidebar() {
+interface SidebarProps {
+  isSidebarOpen: boolean;
+}
+
+export function Sidebar({ isSidebarOpen }: SidebarProps) {
   const technologies = [
     { icon: <FaReact size={20} />, name: "React" },
     { icon: <FaNodeJs size={20} />, name: "Node.js" },
@@ -14,7 +18,10 @@ export function Sidebar() {
   const softSkills = ["Comunicação", "Trabalho em Equipe", "Resolução de Problemas", "Proatividade"];
 
   return (
-    <aside className="fixed left-0 top-16 w-64 h-full bg-background border-r border-primary/20 p-6 flex flex-col">
+    <aside className={`fixed left-0 top-16 w-64 h-full bg-background border-r border-primary/20 p-6 flex flex-col z-40
+                       transform transition-transform duration-300 ease-in-out
+                       ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}
+                       md:translate-x-0`}>
       <div className="flex flex-col items-center mb-8">
         <img 
           src={profilePic}
@@ -29,7 +36,7 @@ export function Sidebar() {
         <a href="https://github.com/DevBielCastro" target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-accent transition-colors">
           <FaGithub size={28} />
         </a>
-        <a href="https://www.linkedin.com/in/gabriel-castro-9a9745209/" target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-accent transition-colors">
+        <a href="https://www.linkedin.com/in/devbielcastro/" target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-accent transition-colors">
           <FaLinkedin size={28} />
         </a>
       </div>

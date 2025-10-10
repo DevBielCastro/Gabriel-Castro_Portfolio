@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { About } from "./components/About";
 import { Contact } from "./components/Contact";
 import { Experience } from "./components/Experience";
@@ -7,12 +8,14 @@ import { Sidebar } from "./components/Sidebar";
 import { Skills } from "./components/Skills";
 
 function App() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   return (
     <main className="min-h-screen bg-background text-gray-300">
-      <Header />
-      <Sidebar />
-      {/* A mudança principal está aqui: pl-64 (padding-left) */}
-      <div className="pl-64"> 
+      <Header isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} />
+      <Sidebar isSidebarOpen={isSidebarOpen} />
+      {/* Padding à esquerda apenas em telas médias ou maiores */}
+      <div className="md:pl-64"> 
         <About />
         <Experience />
         <Projects />
