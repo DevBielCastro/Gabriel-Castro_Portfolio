@@ -1,5 +1,5 @@
 import { FaReact, FaNodeJs, FaDocker, FaGitAlt, FaHtml5, FaCss3Alt, FaUsers, FaCode } from "react-icons/fa";
-import { SiPostgresql, SiTypescript, SiExpress, SiNextdotjs, SiTailwindcss, SiMongodb, SiVercel, SiGithubactions, SiMysql, SiNginx, SiPm2, SiJest, SiVscode } from "react-icons/si";
+import { SiPostgresql, SiTypescript, SiExpress, SiNextdotjs, SiTailwindcss, SiMongodb, SiVercel, SiGithubactions, SiMysql, SiNginx, SiPm2, SiJest, SiVisualstudiocode } from "react-icons/si";
 import { TbApi, TbShieldLock } from "react-icons/tb";
 import { SectionWrapper } from "./SectionWrapper";
 
@@ -42,7 +42,7 @@ export function Skills() {
         { icon: <SiVercel size={24} />, name: "Vercel" },
         { icon: <SiNginx size={24} />, name: "Nginx" },
         { icon: <SiPm2 size={24} />, name: "PM2" },
-        { icon: <SiVscode size={24} />, name: "VS Code" }
+        { icon: <SiVisualstudiocode size={24} />, name: "VS Code" }
       ] 
     },
     { 
