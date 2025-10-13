@@ -5,20 +5,24 @@ export function Experience() {
   const experiences = [
     {
       date: "Mar 2025 - Set 2025 (7 meses)",
-      role: "Desenvolvedor Backend (Estágio)",
+      role: "Desenvolvimento de APIs & Integração (Estágio)",
       company: "Fábrica de Software",
       description: [
-        "Desenvolvi e mantive APIs REST com Node.js/Express para gerenciar o fluxo de dados de produtos e pedidos.",
-        "Implementei um sistema de autenticação com JWT e centralizei o tratamento de erros, aumentando a segurança e a resiliência da aplicação.",
-        "Utilizei Docker para criar e manter ambientes de desenvolvimento padronizados, simplificando o processo de setup para a equipe.",
+        "Projetei e implementei APIs REST para gerenciamento de produtos e pedidos, garantindo contatos estáveis entre back-end e front-end.",
+        "Desenvolvimento em Node.js/Express; integração com front-end React/Next.js e bancos relacionais.",
+        "Implementei autenticação baseada em JWT, validação de entrada e tratamento centralizado de erros.",
+        "Containerização com Docker e documentação das rotinas de integração; participação em fluxos de deploy e versionamento com Git.",
       ],
     },
     {
       date: "Jun 2016 - Out 2025 (9+ anos)",
-      role: "Auxiliar Administrativo",
-      company: "JA Batista Comércio de Alimentos",
+      role: "Gestão de Dados, Processos & Relacionamento com Usuário",
+      company: "JA Batista Comércio de Alimentos LTDA",
       description: [
-        "Responsável pela gestão de planilhas financeiras e suporte em processos organizacionais, desenvolvendo habilidades de organização e comunicação.",
+        "Estruturei e mantive planilhas e relatórios de performance operacional e financeira para suporte à tomada de decisão.",
+        "Realizei coleta de requisitos diretamente com clientes e fornecedores, transformando feedback em mudanças processuais e em requisitos de sistema.",
+        "Mapeei e padronizei processos operacionais, criando checklists e documentação que reduziram retrabalho e erros.",
+        "Automatizei rotinas manuais com fórmulas e modelos de dados, melhorando a eficiência das operações.",
       ],
     },
   ];
