@@ -6,40 +6,61 @@ export function About() {
     <SectionWrapper id="about">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold mb-12 bg-clip-text text-transparent bg-gradient-to-r from-secondary to-accent">
-          Resumo Profissional
+          Sobre mim
         </h2>
 
         <div className="flex flex-col md:flex-row items-center gap-16">
           <div className="md:w-2/3 text-lg text-secondary/80 space-y-6">
             <p>
-              Desenvolvedor Full-Stack com foco na construção de <span className="text-accent/90 font-semibold">APIs REST eficientes com Node.js</span> e <span className="text-accent/90 font-semibold">interfaces dinâmicas com React/Next.js</span>. Minha experiência prática envolve transformar requisitos de negócio em software funcional e escalável.
+              Sou <span className="text-accent/90 font-semibold">Desenvolvedor Front-end</span> em formação, focado em criar
+              interfaces <span className="text-accent/90 font-semibold">modernas, responsivas e acessíveis</span> com{' '}
+              <span className="text-accent/90 font-semibold">React/Next.js</span> e{' '}
+              <span className="text-accent/90 font-semibold">TypeScript</span>.
+              Gosto de transformar ideias em experiências fluidas, com atenção a detalhes de UI, performance e boas práticas.
             </p>
+
             <p>
-              Utilizo <span className="font-semibold">Docker</span> para garantir ambientes de desenvolvimento consistentes e sigo práticas de <span className="font-semibold">Clean Code</span> para criar código de alta manutenibilidade. Busco ativamente minha primeira oportunidade de estágio para aplicar e expandir minhas habilidades, contribuindo para projetos inovadores.
+              No dia a dia, busco escrever código limpo e manutenível com{' '}
+              <span className="font-semibold">componentização</span>,{' '}
+              <span className="font-semibold">reuso</span> e{' '}
+              <span className="font-semibold">padrões consistentes</span> (ex.: commits convencionais).
+              Também tenho base em back-end (<span className="font-semibold">Node/REST/JWT</span>) para integrar melhor com APIs
+              e entender o fluxo completo do produto.
+            </p>
+
+            <p>
+              🎯 Estou em busca de uma oportunidade como <span className="font-semibold">Estágio/Jr Front-end</span> para evoluir
+              em time, contribuir com entregas reais e crescer junto com o produto.
             </p>
           </div>
 
           <div className="md:w-1/3 flex justify-center">
-            <img 
-              src={aboutPhoto} 
+            <img
+              src={aboutPhoto}
               alt="Gabriel Castro em um ambiente profissional"
-              className="rounded-lg w-80 h-96 object-cover shadow-2xl shadow-primary/30 transform hover:scale-105 transition-transform duration-300"
+              className="rounded-2xl w-80 h-96 object-cover shadow-2xl shadow-primary/30 transform hover:scale-[1.03] transition-transform duration-300"
+              loading="lazy"
             />
           </div>
         </div>
 
         <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
-            <div className="bg-primary/30 p-6 rounded-lg">
-                <h3 className="text-2xl font-semibold text-accent mb-4">Formação</h3>
-                <p className="text-secondary font-bold">Tecnólogo em Análise e Desenvolvimento de Sistemas</p>
-                <p className="text-secondary/80">UNIPÊ – Centro Universitário de João Pessoa</p>
-                <p className="text-secondary/60 text-sm mt-1">Conclusão prevista: Dez/2026</p>
-            </div>
-            <div className="bg-primary/30 p-6 rounded-lg">
-                <h3 className="text-2xl font-semibold text-accent mb-4">Idiomas</h3>
-                <p className="text-secondary font-bold">Português: <span className="font-normal text-secondary/80">Nativo</span></p>
-                <p className="text-secondary font-bold">Inglês: <span className="font-normal text-secondary/80">Intermediário (leitura técnica)</span></p>
-            </div>
+          <div className="bg-primary/30 p-6 rounded-2xl border border-primary/30">
+            <h3 className="text-2xl font-semibold text-accent mb-4">Formação</h3>
+            <p className="text-secondary font-bold">Tecnólogo em Análise e Desenvolvimento de Sistemas</p>
+            <p className="text-secondary/80">UNIPÊ – Centro Universitário de João Pessoa</p>
+            <p className="text-secondary/60 text-sm mt-1">Conclusão prevista: Dez/2026</p>
+          </div>
+
+          <div className="bg-primary/30 p-6 rounded-2xl border border-primary/30">
+            <h3 className="text-2xl font-semibold text-accent mb-4">Idiomas</h3>
+            <p className="text-secondary font-bold">
+              Português: <span className="font-normal text-secondary/80">Nativo</span>
+            </p>
+            <p className="text-secondary font-bold">
+              Inglês: <span className="font-normal text-secondary/80">Intermediário (leitura técnica)</span>
+            </p>
+          </div>
         </div>
       </div>
     </SectionWrapper>
