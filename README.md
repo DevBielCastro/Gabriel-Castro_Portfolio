@@ -1,84 +1,60 @@
-# 🚀 Portfólio Pessoal de Gabriel Castro
+<div align="center">
 
-Bem-vindo ao repositório do meu portfólio pessoal! Este é um projeto one-page construído com as tecnologias mais modernas do ecossistema React, com o objetivo de apresentar minhas habilidades, experiências e projetos de forma clara, profissional e visualmente agradável.
+# Portfólio — Gabriel Castro
 
-### ✨ Visão Geral
+<a href="https://gabriel-castro-portfolio.vercel.app" target="_blank">
+  <img src="https://img.shields.io/badge/Demo-Online-000?style=for-the-badge&logo=vercel&logoColor=white" />
+</a>
+<a href="https://www.linkedin.com/in/gabriel-castro-9a9745209/" target="_blank">
+  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+</a>
+<a href="mailto:gabriel.castrogt10@gmail.com" target="_blank">
+  <img src="https://img.shields.io/badge/Contato-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+</a>
+
+<br/>
+<br/>
+
+Projeto do meu portfólio pessoal com foco em **Front-end (React/TypeScript)**, **UI moderna**, **responsividade** e **animações sutis**.
+
+✅ **Acesse:** https://gabriel-castro-portfolio.vercel.app
+
+</div>
+
+---
+
+## ✨ Preview
 
 ![Screenshot do Portfólio](./.github/assets/screenshot.png)
 
 ---
 
-### 📋 Funcionalidades Principais
+## 🚀 Funcionalidades
 
-* **🎨 Design Moderno e Responsivo:** Totalmente adaptado para desktops, tablets e celulares (Mobile First).
-* **📄 Arquitetura One-Page:** Todas as informações em uma única página com navegação suave entre as seções.
-* **🎬 Animações Sutis:** Efeitos de hover e animações de entrada com Framer Motion para uma experiência de usuário mais fluida e dinâmica.
-* **📂 Seções Completas:**
-    * **Sobre Mim:** Uma breve introdução profissional.
-    * **Experiência:** Uma linha do tempo interativa com meu histórico profissional.
-    * **Projetos:** Um grid de cards com meus principais projetos, incluindo links para o código no GitHub e para a versão ao vivo.
-    * **Habilidades:** Lista de competências técnicas agrupadas por categoria.
-* **📬 Formulário de Contato Funcional:** Integrado com o **EmailJS** para permitir o envio de e-mails diretamente pelo site, sem a necessidade de um back-end.
+- Design moderno e responsivo (Mobile First)
+- Portfólio one-page com navegação suave entre seções
+- Animações com Framer Motion
+- Seções: Sobre, Experiência, Projetos, Skills e Contato
+- Formulário de contato funcional com EmailJS (sem back-end)
 
 ---
 
-### 🛠️ Tecnologias Utilizadas
+## 🧰 Tecnologias
 
-Este projeto foi construído utilizando as seguintes tecnologias e ferramentas:
-
-* **Front-end:**
-    * [React](https://reactjs.org/)
-    * [Vite](https://vitejs.dev/)
-    * [TypeScript](https://www.typescriptlang.org/)
-    * [Tailwind CSS](https://tailwindcss.com/)
-    * [Framer Motion](https://www.framer.com/motion/)
-* **Utilitários:**
-    * [EmailJS](https://www.emailjs.com/)
-    * [React Icons](https://react-icons.github.io/react-icons/)
-* **Gerenciador de Pacotes:**
-    * [Yarn](https://yarnpkg.com/)
+- React
+- Vite
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- EmailJS
+- ESLint
 
 ---
 
-### ⚙️ Como Executar o Projeto Localmente
+## ⚙️ Como rodar localmente (opcional)
 
-Para rodar este projeto na sua máquina, siga os passos abaixo:
+> Se você for rodar no seu PC depois, siga:
 
-1.  **Clone o repositório:**
-    ```bash
-    git clone [https://github.com/DevBielCastro/Gabriel-Castro_Portfolio.git](https://github.com/DevBielCastro/Gabriel-Castro_Portfolio.git)
-    ```
-
-2.  **Navegue até a pasta do projeto:**
-    ```bash
-    cd Gabriel-Castro_Portfolio
-    ```
-
-3.  **Instale as dependências:**
-    (Este projeto utiliza o Yarn. Certifique-se de que o tenha instalado com `npm install -g yarn`)
-    ```bash
-    yarn
-    ```
-
-4.  **Configure as variáveis de ambiente:**
-    * Crie um arquivo `.env.local` na raiz do projeto.
-    * Adicione suas chaves do EmailJS, como no exemplo abaixo:
-        ```env
-        VITE_EMAILJS_SERVICE_ID=seu_service_id
-        VITE_EMAILJS_TEMPLATE_ID=seu_template_id
-        VITE_EMAILJS_PUBLIC_KEY=sua_public_key
-        ```
-
-5.  **Inicie o servidor de desenvolvimento:**
-    ```bash
-    yarn dev
-    ```
-
-O site estará disponível em `http://localhost:5173`.
-
----
-
-### 📞 Contato
-
-* **LinkedIn:** [linkedin.com/in/devbielcastro](https://www.linkedin.com/in/devbielcastro/)
-* **E-mail:** `gabriel.castrogt10@gmail.com`
+1) Instale dependências:
+```bash
+yarn
