@@ -27,7 +27,7 @@ export function Sidebar({ isSidebarOpen }: SidebarProps) {
           className="w-28 h-28 rounded-full border-2 border-accent mb-4 object-cover"
         />
         <h2 className="text-2xl font-bold text-secondary">Gabriel Castro</h2>
-        <p className="text-sm text-secondary/70 mb-4">Desenvolvedor Full-Stack</p>
+        <p className="text-sm text-secondary/70 mb-4">Desenvolvedor Front-end</p>
       </div>
 
       <div className="flex justify-center space-x-4">
@@ -66,4 +66,5 @@ export function Sidebar({ isSidebarOpen }: SidebarProps) {
       </div>
     </aside>
   );
+
 }
