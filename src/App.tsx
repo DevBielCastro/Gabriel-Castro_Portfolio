@@ -21,14 +21,11 @@ export default function App() {
       {/* Sidebar fixa */}
       <Sidebar isSidebarOpen={isSidebarOpen} />
 
-      {/* ✅ Wrapper do conteúdo com largura controlada */}
-      <div className="md:ml-72 w-full">
-        {/* ✅ garante que o header não use 100vw */}
-        <div className="w-full max-w-full">
-          <Header onToggleSidebar={toggleSidebar} />
-        </div>
+      {/* ✅ AQUI está a correção: padding-left no desktop (NÃO margin-left) */}
+      <div className="w-full md:pl-72">
+        <Header onToggleSidebar={toggleSidebar} />
 
-        <main className="w-full max-w-full">
+        <main className="w-full">
           <About />
           <Experience />
           <Projects />
