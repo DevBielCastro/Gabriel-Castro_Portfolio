@@ -17,15 +17,18 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-background text-secondary">
+    <div className="min-h-screen bg-background text-secondary overflow-x-hidden">
       {/* Sidebar fixa */}
       <Sidebar isSidebarOpen={isSidebarOpen} />
 
-      {/* ✅ CONTEÚDO (Header + Seções) deslocado no desktop pra não ficar atrás da Sidebar */}
-      <div className="md:ml-72">
-        <Header onToggleSidebar={toggleSidebar} />
+      {/* ✅ Wrapper do conteúdo com largura controlada */}
+      <div className="md:ml-72 w-full">
+        {/* ✅ garante que o header não use 100vw */}
+        <div className="w-full max-w-full">
+          <Header onToggleSidebar={toggleSidebar} />
+        </div>
 
-        <main>
+        <main className="w-full max-w-full">
           <About />
           <Experience />
           <Projects />
