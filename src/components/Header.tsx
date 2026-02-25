@@ -18,7 +18,7 @@ export function Header({ isSidebarOpen, setIsSidebarOpen }: HeaderProps) {
     <header className="bg-background/80 fixed top-0 w-full h-16 flex items-center justify-between px-4 md:px-8 backdrop-blur-sm z-50">
       <div>
         <h1 className="text-lg md:text-xl font-bold text-secondary">
-          Gabriel Castro — <span className="text-accent">Front-end Developer</span>
+          Gabriel Castro — <span className="text-accent">Desenvolvedor Frontend</span>
         </h1>
       </div>
       {/* Navegação para Desktop - esconde em telas pequenas */}
@@ -43,3 +43,4 @@ export function Header({ isSidebarOpen, setIsSidebarOpen }: HeaderProps) {
   );
 
 }
+
