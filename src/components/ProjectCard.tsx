@@ -1,4 +1,4 @@
-import { FaGithub, FaLink } from "react-icons/fa";
+import { FaGithub, FaLink, FaRegFileAlt } from "react-icons/fa";
 
 interface ProjectCardProps {
   image: string;
@@ -7,40 +7,81 @@ interface ProjectCardProps {
   tags: string[];
   liveUrl?: string;
   githubUrl: string;
+  caseUrl?: string;
 }
 
-export function ProjectCard({ image, title, description, tags, liveUrl, githubUrl }: ProjectCardProps) {
+export function ProjectCard({
+  image,
+  title,
+  description,
+  tags,
+  liveUrl,
+  githubUrl,
+  caseUrl,
+}: ProjectCardProps) {
   return (
-    <article className="bg-primary/50 rounded-lg overflow-hidden flex flex-col group transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-accent/20">
-      <div className="overflow-hidden">
-        <img src={image} alt={`Imagem do projeto ${title}`} className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
+    <div className="bg-primary/30 rounded-xl overflow-hidden border border-primary/30 hover:border-accent/50 transition-colors">
+      <div className="h-44 w-full overflow-hidden">
+        <img
+          src={image}
+          alt={`Preview do projeto ${title}`}
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
       </div>
 
-      <div className="p-6 flex-grow flex flex-col">
-        <h3 className="text-2xl font-bold text-secondary mb-2">{title}</h3>
-        <p className="text-secondary/70 text-sm mb-4 flex-grow">{description}</p>
+      <div className="p-6">
+        <h3 className="text-2xl font-semibold text-secondary mb-3">{title}</h3>
 
-        <div className="flex flex-wrap gap-2 mb-4">
+        <p className="text-secondary/75 text-sm leading-relaxed">{description}</p>
+
+        <div className="mt-5 flex flex-wrap gap-2">
           {tags.map((tag) => (
-            <span key={tag} className="text-xs font-semibold bg-primary text-accent/80 px-3 py-1 rounded-full">
+            <span
+              key={tag}
+              className="text-xs px-3 py-1 rounded-full bg-primary/50 text-accent border border-accent/20"
+            >
               {tag}
             </span>
           ))}
         </div>
 
-        <div className="mt-auto flex items-center gap-4 pt-4 border-t border-primary/50">
+        <div className="mt-6 flex items-center gap-5">
           {liveUrl && (
-            <a href={liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-secondary hover:text-accent transition-colors">
+            <a
+              href={liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-secondary hover:text-accent transition-colors text-sm"
+            >
               <FaLink />
               Ver Online
             </a>
           )}
-          <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-secondary hover:text-accent transition-colors">
+
+          {caseUrl && (
+            <a
+              href={caseUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-secondary hover:text-accent transition-colors text-sm"
+            >
+              <FaRegFileAlt />
+              Case/Detalhes
+            </a>
+          )}
+
+          <a
+            href={githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-secondary hover:text-accent transition-colors text-sm"
+          >
             <FaGithub />
             GitHub
           </a>
         </div>
       </div>
-    </article>
+    </div>
   );
 }
